@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     const userCredObj = formRef.value;
     console.log(userCredObj);
     // if user
-    if (userCredObj.email === 'admin@gmail.com' && userCredObj.password === 'admin')
+    if (userCredObj.email == 'admin@gmail.com' && userCredObj.password === 'admin')
    {
 
     this.toastr.success('admin login', 'login success');
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
               this.spinner.hide();
             }, 1000);
           console.log(res.message);
-          if (res.message === 'Logged in successfully'){
+          if (res.message == 'Logged in successfully'){
             this.status = 1;
               // store token and username in localstorage
             localStorage.setItem('token', res.signedToken);
@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
 
 
   ifOk(): any{
-    if (this.status === 1) {
+    if (this.status == 1) {
     this.router.navigateByUrl('/home');
     }
 

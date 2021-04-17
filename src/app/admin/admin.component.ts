@@ -34,7 +34,7 @@ export class AdminComponent implements OnInit {
     this.us.addproduct(this.formData).subscribe(
           res => {
             this.toastr.success('Product Added Successfuly');
-            if (res.message === 'product Added'){
+            if (res.message == 'product Added'){
                   // alert("Product Added Successfuly")
                 }
           },

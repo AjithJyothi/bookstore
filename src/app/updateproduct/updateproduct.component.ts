@@ -45,11 +45,11 @@ export class UpdateproductComponent implements OnInit {
     this.us.editBook(formRef).subscribe(
       res => {
         this.toastr.success('book updated');
-        if (res.message === 'book updated') {
+        if (res.message == 'book updated') {
           // alert("book updated")
           this.router.navigateByUrl('/productdetails');
         }
-        if (res.message === 'book not found') {
+        if (res.message == 'book not found') {
           alert(res);
         }
       },

@@ -56,7 +56,7 @@ userObj: any;
           res => {
             this.toastr.success('Product Added Successfully');
 
-            if (res.message === 'product Added'){
+            if (res.message == 'product Added'){
                   // alert("Product Added Successfuly")
                 }
           },
@@ -93,7 +93,7 @@ userObj: any;
               this.toastr.success('book removed');
 
             }
-            if (res.message === 'book not found') {
+            if (res.message == 'book not found') {
 
             this.toastr.success('book not found');
             }

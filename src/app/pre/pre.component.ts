@@ -85,12 +85,12 @@ export class PreComponent implements OnInit {
       const userObj = formRef.value;
       this.us.tocart(userObj).subscribe(
         res => {
-              if (res.message === 'user existed'){
+              if (res.message == 'user existed'){
                 this.toastr.error('user name is already taken... choose different user name');
                   // alert("user name is already taken... choose different user name")
                 formRef.clear();
               }
-              if (res.message === 'user created'){
+              if (res.message == 'user created'){
                 this.toastr.success('Registration success');
                 // alert("Registration success")
 

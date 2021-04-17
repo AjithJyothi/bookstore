@@ -244,7 +244,7 @@ myOrders(): any{
            this.us.tocart(obj).subscribe(
                  res => {
 
-                       if (res.message === 'product Added'){
+                       if (res.message == 'product Added'){
                        this.toastr.success('Book added to cart');
 
 
@@ -277,12 +277,12 @@ myOrders(): any{
     const userObj = formRef.value;
     this.us.tocart(userObj).subscribe(
       res => {
-            if (res.message === 'user existed'){
+            if (res.message == 'user existed'){
               this.toastr.success('user name is already taken... choose different user name');
                 // alert("user name is already taken... choose different user name")
               formRef.clear();
             }
-            if (res.message === 'user created'){
+            if (res.message == 'user created'){
               this.toastr.success('Registration success');
 
               // alert("Registration success")

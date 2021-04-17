@@ -34,12 +34,12 @@ export class RegisterComponent implements OnInit {
     console.log(userObj);
     this.us.createUser(userObj).subscribe(
           res => {
-                if (res.message === 'user existed'){
+                if (res.message == 'user existed'){
                   this.displayId = 'user name is already taken... choose different user name';
 
                   formRef.clear();
                 }
-                if (res.message === 'user created'){
+                if (res.message == 'user created'){
 
                  this.displayId = this.userId;
                 }

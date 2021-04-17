@@ -43,11 +43,11 @@ export class UpdateprofileComponent implements OnInit {
     this.us.editUser(obj).subscribe(
       res => {
         this.toastr.success('profile updated');
-        if (res.message === 'Profile updated') {
+        if (res.message == 'Profile updated') {
           // alert("Profile updated")
           this.router.navigateByUrl('/profile');
         }
-        if (res.message === 'User Profile not found') {
+        if (res.message == 'User Profile not found') {
           alert(res);
         }
       },

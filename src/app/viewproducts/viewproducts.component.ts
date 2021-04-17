@@ -117,7 +117,7 @@ export class ViewproductsComponent implements OnInit {
       this.us.tocart(obj).subscribe(
         res => {
 
-          if (res.message === 'product Added') {
+          if (res.message == 'product Added') {
             this.toastr.success('Book added to cart');
 
 

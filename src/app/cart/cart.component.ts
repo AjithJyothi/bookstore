@@ -59,14 +59,14 @@ else{
      console.log(err);
    }
  ); }
-  if (n === products.length){
+  if (n == products.length){
   this.toastr.success('Books ordered successfully');
 }
   }
 }
 
 decr(i): any{
-  if ( this.products[i].quantity === 1){
+  if ( this.products[i].quantity == 1){
     this.toastr.error('cannot decrement');
   }
   else{

@@ -55,7 +55,7 @@ export class ViewcartComponent implements OnInit {
       res => {
         this.toastr.error('product removed"');
 
-        if (res.message === 'Product details deleted')
+        if (res.message == 'Product details deleted')
         {
           alert('product removed');
         }
